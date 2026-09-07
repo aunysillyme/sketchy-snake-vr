@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#FCFAF6">
+  <title>Sketchy Snake VR 🥽✏️</title>
+
+  <!-- Social & WebXR Metadata -->
+  <meta property="og:title" content="Sketchy Snake VR 🥽✏️">
+  <meta property="og:description" content="A 3D Spatial Sketchbook Snake game in WebXR for Meta Quest and Apple Vision Pro 🧡">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aunysillyme.github.io/sketchy-snake-vr/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@AunySillyMe">
+
+  <!-- Fonts & Styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Three.js + Addons via Import Map -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="ui-container">
+    <!-- Non-VR / Flat Screen HUD & Controls -->
+    <header class="vr-header">
+      <div class="header-left">
+        <h1 class="logo">Sketchy Snake <span class="vr-badge">VR 🥽</span></h1>
+        <p class="subtitle">3D Spatial Sketchbook Arcade</p>
+      </div>
+      <div class="vr-score-cards">
+        <div class="card current">
+          <span class="label">SCORE</span>
+          <span id="score-display" class="val">0</span>
+        </div>
+        <div class="card best">
+          <span class="label">BEST</span>
+          <span id="best-display" class="val">0</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Desktop / Touch Navigation Hints -->
+    <div id="desktop-instructions" class="instructions-panel">
+      <div class="inst-content">
+        <h3>✏️ How to Play</h3>
+        <p><strong>Meta Quest / VR:</strong> Put on headset, click <em>ENTER VR</em> below, and use your controller joystick or aim pointer to guide the snake!</p>
+        <p><strong>Desktop / Phone:</strong> Use <strong>Arrow Keys / WASD</strong> (or <strong>Q / E</strong> for 3D elevation), and drag the screen to orbit the 3D sketchbook arena.</p>
+        <div class="music-pill">
+          <button id="music-toggle-btn" class="pill-btn">▶ Music: Blue Lightning ⚡</button>
+          <button id="next-track-btn" class="pill-btn mini">⏭</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enter VR Button Mount Point -->
+    <div id="vr-button-mount"></div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
