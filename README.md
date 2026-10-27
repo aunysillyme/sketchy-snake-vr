@@ -1,5 +1,7 @@
 # 🥽 Sketchy Snake VR ✏️
 
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/aunysillyme/sketchy-snake-vr/badge)](https://scorecard.dev/viewer/?uri=github.com/aunysillyme/sketchy-snake-vr)
+
 <p align="center">
   <strong>An immersive 3D spatial sketchbook snake game built in WebXR with Three.js for Meta Quest, Apple Vision Pro, and web browsers.</strong>
 </p>
